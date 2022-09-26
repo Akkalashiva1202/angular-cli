@@ -1,0 +1,52 @@
+ <table border="10px" width="100%">
+<tr>
+  <th> playerId </th>
+  <th> playername</th>
+<th> team </th>
+
+</tr>
+<tr *ngFor="let play of players">
+  <td>{{play.playerId}}</td>
+<td>{{play.playerName}}</td>
+<td>{{play.team}}</td>
+
+
+  <td><button (click)="deleteplayer(play.playerId)"> delete </button></td>
+  <td>
+<!--
+    <button (click)="updateplayer()"> update </button> -->
+  </td>
+
+
+</tr>
+ </table>
+
+
+ <br><br>
+<table border="10px" >
+
+  playerId : <input type="text" [(ngModel)]="player.playerId">
+  playerName : <input type="text" [(ngModel)]="player.playerName">
+  team : <input type="text" [(ngModel)]="player.team">
+  <button (click)="addplayer()"> add player </button>
+
+
+</table>
+
+
+
+<br><br><br>
+
+ delete playerbyid  : <input type="text" [(ngModel)]="idd">
+<button (click)="deleteplayer(idd)">delete player</button>
+
+<br><br><br>
+getby id players :
+<input type="text" [(ngModel)]="getbyidplayer">
+<button (click)="getbyid(getbyidplayer)"> get players </button>
+
+br
+<app-address mycity="myssore"></app-address>
+<br><br><br><br>
+
+<app-address></app-address>
